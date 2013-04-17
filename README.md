@@ -10,15 +10,15 @@ This is a new configuration section, which will appear in the advanced settings 
 
 The control designer is based on the default FormsControlDesigner. The layout has input fields for the data that we want to send to SalesForce. The script has several more important functions:
 
-•	_pageLoadHandler: Initializes the controls, sets the initial “No mapping” value for the DDLs, registers the _selectItemHandler that will be triggered when you select an existing form from the list
+-	_pageLoadHandler: Initializes the controls, sets the initial “No mapping” value for the DDLs, registers the _selectItemHandler that will be triggered when you select an existing form from the list
 
-•	_selectItemHandler: when a form is selected, a request (getFields) is made that will get a list of all the fields for that form and set that set as the data source for the DDLs
+-	_selectItemHandler: when a form is selected, a request (getFields) is made that will get a list of all the fields for that form and set that set as the data source for the DDLs
 
-•	getFields: calls a custom service that will return all the fields of a particular form in the <field_title>,<field_id> form
+-	getFields: calls a custom service that will return all the fields of a particular form in the <field_title>,<field_id> form
 
-•	applyChanges: when the designer is closed the selected mappings (lead field->form field id) are persisted 
+-	applyChanges: when the designer is closed the selected mappings (lead field->form field id) are persisted 
 
-•	refreshUI: when the designer is reopened the previously persisted values are set as initial values for the DDLs
+-	refreshUI: when the designer is reopened the previously persisted values are set as initial values for the DDLs
 
 + FormsControlCustom
 
