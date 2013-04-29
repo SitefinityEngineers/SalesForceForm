@@ -28,11 +28,11 @@ SitefinityWebApp.SalesForce.FormsControlDesigner.FormsControlDesignerCustom.prot
         var controlData = this.get_controlData();
         $("input.inputField").data("kendoDropDownList");
 
-        if (typeof controlData.FieldLastName != 'undefined' && controlData.FieldLastName != "")
+        if (typeof controlData.FieldLastName != 'undefined' && controlData.FieldLastName != "" && $("#lastname").length)
             $("#lastname").data("kendoDropDownList").select(function (dataItem) {
                 return dataItem.Value === controlData.FieldLastName;
             });
-        if (typeof controlData.FieldCompany != 'undefined' && controlData.FieldCompany != "")
+        if (typeof controlData.FieldCompany != 'undefined' && controlData.FieldCompany != "" && $("#company").length)
             $("#company").data("kendoDropDownList").select(function (dataItem) {
                 return dataItem.Value === controlData.FieldCompany;
             });
